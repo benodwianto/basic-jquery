@@ -6,8 +6,37 @@
     <title>Jquery</title>
 </head>
 <body>
-    
+    <h1>Whered you want go?</h1>
+    <ul class="lokasi">
+        <li class="jakarta">
+            Jakarta 
+            <button id="btn">suka</button> 
+            <button id="btn">animate</button> 
+            <button id="x">x</button>
+        </li>
+        <li class="bandung">Bandung</li>
+        <li class="semarang">Semarang</li>
+        <li class="bekasi">Bekasi</li>
+    </ul>
+    <button id="moveItem">Move</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btn').on('click', function () {
+                alert('menyukai jakarta');
+            });
+
+            $('#x').on('click', function () {
+                $('.jakarta').remove()
+            });
+
+            $('#moveItem').on('click', function () {
+                $('.jakarta').animate({
+                    marginLeft: 30
+                })
+            });
+        });
+    </script>
 </body>
 </html>

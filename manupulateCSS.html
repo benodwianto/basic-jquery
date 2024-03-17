@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        .biru {
+            color: blue;
+        }
+
+        .merah {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Whered you want go?</h1>
+    <ul class="lokasi">
+        <li class="jakarta">
+            Jakarta 
+        </li>
+        <li class="bandung">Bandung</li>
+        <li class="semarang">Semarang</li>
+        <li class="bekasi">Bekasi</li>
+    </ul>
+    <button id="jadiBiru">Jadi biru!</button>
+    <button id="jadiMerah">Jadi Merah!</button>
+    <button id="jadiBesar">Jadi Besar!</button>
+    <button id="jadiBesar">Jadi Kecil!</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#jadiBiru').on('click', function () {
+                $('.bekasi').removeClass('merah')
+                $('.bekasi').addClass('biru')
+            });
+
+            $('#jadiMerah').on('click', function () {
+                $('.bekasi').removeClass('biru')
+                $('.bekasi').addClass('merah')
+            });
+
+            $('#jadiBesar').on('click', function () {
+                $('.bekasi').animate({
+                    fontSize: 50
+                })
+            });
+        });
+    </script>
+</body>
+</html>
